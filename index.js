@@ -12,15 +12,25 @@
     const min = 60; 
     const hour = 24; 
     const year = 365; 
-    let MyAge = 24; 
-    MyAgeInSecond=MyAge*year*hour*min*sec; 
-    console.log(MyAgeInSecond); 
+    let MyAge = prompt('Сколько тебе лет?');
+    let MyAgeInSecond=MyAge*year*hour*min*sec; 
+    let leapYear = MyAge/4*24*60*60; //с учетом високосного года
+    console.log(MyAgeInSecond+leapYear); 
  
 // Task 3.
+
+//way 1:
     let count = 42; 
     count=String(count); 
     let userName = '42'; 
     userName=Number(userName); 
+    console.log(count, userName);
+
+//way 2:
+
+    let count = 42; 
+    let userName = '42'; 
+    [count, userName] = [userName, count]; 
     console.log(count, userName);
 
 // Task 4.
